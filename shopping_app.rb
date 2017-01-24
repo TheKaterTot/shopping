@@ -18,6 +18,7 @@ end
 post '/items' do
   @item = params[:item]
   @price = params[:price]
+
   erb :cart
 end
 
@@ -28,11 +29,13 @@ end
 get '/cart' do
   @item = params[:item]
   @price = params[:price]
+
   erb :cart
 end
 
 post '/users' do
   @username = params[:username]
   @password = params[:password]
-  erb :user 
+  
+  erb :user
 end
