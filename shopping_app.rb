@@ -16,9 +16,23 @@ get '/items/new' do
 end
 
 post '/items' do
+  @item = params[:item]
+  @price = params[:price]
   erb :cart
 end
 
 get '/users/new' do
   erb :new_user
+end
+
+get '/cart' do
+  @item = params[:item]
+  @price = params[:price]
+  erb :cart
+end
+
+post '/users' do
+  @username = params[:username]
+  @password = params[:password]
+  erb :user 
 end
